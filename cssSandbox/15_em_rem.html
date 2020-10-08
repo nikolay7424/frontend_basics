@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em rem units</title>
+    <style>
+        /* html 10px and rem multipliers is handy! */
+        /* 62.5 % is more responsive, because somebody can change font size in settings in browser */
+        html {
+            /* font-size: 10px; */
+            font-size: 62.5%;
+        }
+
+        #box-1 {
+            font-size: 20px;
+        }
+
+        #box-1 p {
+            font-size: 1.5em;
+            /* padding wille be the same as font size, because we multilpying font size by 1.5 */
+            /* try to avoid using em's */
+            padding: 1em;
+        }
+
+        #box-1 ul {
+            font-size: 1.2em;
+        }
+
+
+        #box-2 h3 {
+            font-size: 2rem;
+        }
+
+        #box-2 p {
+            font-size: 1.6rem;
+            line-height: 1.7rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="box-1">
+        <h3>box 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, expedita.</p>
+        <!-- fitst ul multiplying by 1.2 -->
+        <ul>
+            <!-- li{$}*4 -->
+            <li>1</li>
+            <li>2</li>
+            <li>3
+                <!-- second ul is multipluing first ul by 1.2 -->
+                <ul>
+                    <!-- font size of these will be #box-1 * 1.2 * 1.2 -->
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </li>
+            <li>4</li>
+        </ul>
+    </div>
+    <div id="box-2">
+        <h3>box 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, expedita.</p>
+    </div>
+</body>
+</html>

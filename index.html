@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            line-height: 1.5;
+            background: cadetblue;
+        }
+
+
+        li {
+            list-style: none;
+        }
+
+        h2 {
+            background: #ccc;
+            padding: 0.5rem 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            background: #ccc;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 0.2rem;
+            margin: 0.3rem;
+            background: #f4f4f4;
+        }
+
+        .card-1 a {
+            text-align: left;
+        }
+
+        a:hover {
+            background: cadetblue;
+        }
+
+        a:active {
+            background: lightseagreen;
+            color: white;
+        }
+
+        header div {
+            background: coral;
+            padding: 2rem;
+            color: white;
+            width: 100%;
+        }
+
+        section {
+            max-width: 1600px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+        section .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            text-align: center;
+            grid-gap: 1rem;
+        }
+
+        section .container .card {
+            background: white;
+            padding: 1rem;
+        }
+
+        section .container .card:nth-child(1) {
+            grid-row: 1 /span 2;
+        }
+
+        /* toggler */
+        .toggler {
+            height: 30px;
+            width: 100%;
+            cursor: pointer;
+            z-index: 2;
+            transform: translate(0, -30px);
+            opacity: 0;
+        }
+
+        .card-1 ul {
+            transform: translate(0, -30px);
+            display: none;
+        }
+
+        .toggler:checked + ul{
+            display: block;
+        }
+
+        .toggler-1:checked ~ .icon-1 {
+            transform: rotateX(90deg);
+        }
+
+        /* dropdown */
+        .card-1 {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .p-1 {
+            padding: 0.7rem;
+        }
+
+        @media(max-width: 768px){
+        section .container {
+            grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>HTML & CSS knowledge summary</h1>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="card card-1">
+                <h2>HTML & CSS</h2>
+                <div class="p-1">
+                <div class="wrap">
+                    <h3>HTML</h3>
+                    <input type="checkbox" class="toggler">
+                    <ul>
+                        <li><a target="_blank" href="/html/index.html">01_basics</a></li>
+                    </ul>
+                </div>
+                <div class="wrap">
+                    <h3>CSS</h3>
+                    <input type="checkbox" class="toggler">
+                    <ul>
+                        <li><a target="_blank" href="/cssSandbox/01_basic.html">01_basic</a></li>
+                        <li><a target="_blank" href="/cssSandbox/02_selectors.html">02_selectors</a></li>
+                        <li><a target="_blank" href="/cssSandbox/03_fonts.html">03_fonts</a></li>
+                        <li><a target="_blank" href="/cssSandbox/04_colours.html">04_colours</a></li>
+                        <li><a target="_blank" href="/cssSandbox/05_backgrounds.html">05_backgrounds</a></li>
+                        <li><a target="_blank" href="/cssSandbox/06_box_model.html">06_box_model</a></li>
+                        <li><a target="_blank" href="/cssSandbox/07_float_align.html">07_float_align</a></li>
+                        <li><a target="_blank" href="/cssSandbox/08_links_buttons.html">08_links_buttons</a></li>
+                        <li><a target="_blank" href="/cssSandbox/09_menus.html">09_menus</a></li>
+                        <li><a target="_blank" href="/cssSandbox/10_inline_block.html">10_inline_block</a></li>
+                        <li><a target="_blank" href="/cssSandbox/11_position.html">11_position</a></li>
+                        <li><a target="_blank" href="/cssSandbox/12_form_styling.html">12_form_styling</a></li>
+                        <li><a target="_blank" href="/cssSandbox/13_aside_visibiliy_negative_margin.html">13_aside_visibiliy_negative_margin</a></li>
+                        <li><a target="_blank" href="/cssSandbox/14_media_queries.html">14_media_queries</a></li>
+                        <li><a target="_blank" href="/cssSandbox/15_em_rem.html">15_em_rem</a></li>
+                        <li><a target="_blank" href="/cssSandbox/16_viewport_height_width.html">16_viewport_height_width</a></li>
+                        <li><a target="_blank" href="/cssSandbox/17_flex_basics.html">17_flex_basics</a></li>
+                        <li><a target="_blank" href="/cssSandbox/18_flex_align.html">18_flex_align</a></li>
+                    </ul>
+                </div>
+
+                <div class="wrap">
+                    <h3>CSS advanced</h3>
+                    <input type="checkbox" class="toggler">
+                    <ul>
+                        <li><a target="_blank" href="/cssSandbox2/01_targeted_selectors.html">01_targeted_selectors</a></li>
+                        <li><a target="_blank" href="/cssSandbox2/02_nth_child.html">02_nth_child</a></li>
+                        <li><a target="_blank" href="/cssSandbox2/03_before_after.html">03_before_after</a></li>
+                        <li><a target="_blank" href="/cssSandbox2/04_box_shadows.html">04_box_shadows</a></li>
+                        <li><a target="_blank" href="/cssSandbox2/05_text_shadows.html">05_text_shadows</a></li>
+                        <li><a target="_blank" href="/cssSandbox2/06_css_vars.html">06_css_vars</a></li>
+                        <li><a target="_blank" href="/cssSandbox2/07_keyframe_animation.html">07_keyframe_animation</a></li>
+                        <li><a target="_blank" href="/cssSandbox2/08_keyframe_animation 2.html">08_keyframe_animation</a></li>
+                        <li><a target="_blank" href="/cssSandbox2/09_transitions.html">09_transitions</a></li>
+                        <li><a target="_blank" href="/cssSandbox2/10_transform.html">10_transform</a></li>
+                    </ul>
+                </div>
+
+                <div class="wrap">
+                   <h3>CSS Grid</h3>
+                   <input type="checkbox" class="toggler">
+                    <ul>
+                        <li><a target="_blank" href="/cssGridSandbox/01_grid_columns.html">01_grid_columns</a></li>
+                        <li><a target="_blank" href="/cssGridSandbox/02_grid_rows.html">02_grid_rows</a></li>
+                        <li><a target="_blank" href="/cssGridSandbox/03_grid_span.html">03_grid_span</a></li>
+                        <li><a target="_blank" href="/cssGridSandbox/04_autofit.html">04_autofit</a></li>
+                        <li><a target="_blank" href="/cssGridSandbox/05_grid_areas.html">05_grid_areas</a></li>
+                        <li><a target="_blank" href="/cssGridSandbox/06_grid_media.html">06_grid_media</a></li>
+                    </ul>
+                </div> 
+            </div>
+            </div>
+            <div class="card">
+                <h2>Mini Projects</h2>
+                <ul>
+                    <li><a target="_blank" href="/quick_dropdown_menu/index.html">quick dropdown menu</a></li>
+                    <li><a target="_blank" href="/knowledge_timeline/index.html">knowledge timeline</a></li>
+                    <li><a target="_blank" href="/hamburger_overlay_menu/index.html">hamburger overlay menu</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>Websites</h2>
+                <ul>
+                    <li><a target="_blank" href="/hotel_website/index.html">hotel website</a></li>
+                    <li><a target="_blank" href="/edge_ledger/index.html">edge ledger</a></li>
+                    <li><a target="_blank" href="/news_grid_website/index.html">news grid website</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

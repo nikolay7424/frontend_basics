@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="this is desc. of web page, that shows in the search results">
+        <meta name="keywords" content="8-10 keywords for describing your web site">
+        <meta name="robots" content="NOINDEX, NOFOLLOW">
+        <!-- 
+        NOINDEX - no indexation in search engines
+        NOFOLLOW - no following links in your website for indexation 
+        -->
+        <style>
+            #groot {
+                font-family: Arial, Helvetica, sans-serif;
+                color: aqua;
+            }
+        </style>
+        <title>put title here</title>
+    </head>
+    <body>
+        <a id = "top" href="http://google.com" target = "_blank">google</a>
+        </br>
+        </br>
+        <h1>header</h1>
+        <!-- there should be only one <h1> per page,
+            search engines look to this tag, it shoud be describing content -->
+            <p>p1</p>
+            <p>p2</p>
+            <p>p3</p> 
+            <p>p4</p>
+            <p>p5</p>
+            <!-- shift + alt + dwnArrow = duplicate -->
+            <!-- alt + up/downArrow = move up and down -->
+            <!-- ctrl + alt + up/downArrow = clone cursor -->
+    
+            <ol type="1">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ol>
+            <ol type="A">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ol>
+            <ol type="a">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ol>
+            <ol type="I">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ol>
+            <ol type="i">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ol>
+        <p><sub>lower text </sub>regular text <sup>upper text</sup></p>
+        </br>
+        </br>
+        <table 
+                background = "https://cc.i.lithium.com/t5/image/serverpage/image-id/19646i9FB359A349FEBDDF?v=1.0" 
+                border = "2"
+                bordercolor = "cyan"
+                width = "460"
+                id = "groot">
+            <tr>
+                <td align="center">
+                    <p><b>O</b></p>
+                </td>
+                <td align="center">            
+                    <p><b>column 1</b></p>
+                </td>
+                <td align="center">
+                    <p><b>column 2</b></p>
+                </td>
+            </tr>
+            <tr>
+                    <td align="center">
+                        <p><b>line 1</b></p>
+                    </td>
+                    <td align="center">            
+                        <p><b>value 1</b></p>
+                    </td>
+                    <td align="center">
+                        <p><b>value 2</b></p>
+                    </td>
+            </tr>
+            <tr>
+                    <td align="center">
+                        <p><b>line 2</b></p>
+                    </td>
+                    <td align="center">            
+                        <p><b>value 3</b></p>
+                    </td>
+                    <td align="center">
+                        <p><b>value 4</b></p>
+                    </td>
+            </tr>
+            
+        </table>
+        </br>
+        </br>
+            <input name = "options" type = "radio" value = "option 1">option 1<Br>
+            <input name = "options" type = "radio" value = "option 2">option 2<Br>
+        </br>
+        </br>
+            <form action = "http://google.com">
+                <p><input type = "search" placeholder="you can change this text">
+                <input type = "submit" value="you can change the value too"></p>
+            </form>
+        </br>
+        </br>
+        <pre>Preformated         text
+
+            ends here.
+        </pre>
+        </br>
+        </br>
+        <pre><code>for(i=1; i=100; i++)
+            {
+                you can display code using 'code' tag
+            }
+        </code></pre>
+        </br>
+        </br>
+        </br>
+            <!--commented-->              
+        </br>
+        </br>
+            <hr>
+        </br>
+        </br>
+            <div align = "center" style = "width:100px; height:100px; background-color:brown; color:white;">block element1</div>
+        </br>
+        </br>
+            <div align = "center" style = "width:100px; height:100px; background-color:brown; color:white;">block element2</div>
+            <div align = "center" style = "width:100px; height:100px; background-color:brown; color:white;">block element3</div>
+        </br>
+        </br>
+            <div 
+            align = "center" 
+            style = "
+                display: inline-block; 
+                width:100px; 
+                height:100px; 
+                background-color:brown; 
+                color:white;
+            ">inline block element1</div>
+                        <div 
+                        align = "center" 
+                        style = "
+                            display: inline-block; 
+                            width:100px; 
+                            height:100px; 
+                            background-color:brown; 
+                            color:white;
+                        ">inline block element2</div>
+        </br>
+        </br>
+
+        <form action="process.php">
+            <div>
+                <label for="name">Name</label><br>
+                <input type="text" id="name" name="name" value="John Smith">
+            </div>
+            <div>
+                <label for="surname">Surname</label><br>
+                <input type="text" id="surname" name="surname" autofocus>
+            </div>
+            <div>
+                <label for="email">email</label><br>
+                <input type="email" id="email" name="email" placeholder="type an email">
+            </div>
+            <div>
+                <label for="message">Message</label><br>
+                <textarea name="message" id="message" cols="22" rows="10"></textarea>
+            </div>
+            <div>
+                <label for="sex">Sex</label>
+                <select name="sex" id="sex">
+                    <option value="male">Male</option>
+                    <option value="female" selected>Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="age">Age</label><br>
+                <input type="number" name="age" id="age">
+            </div>
+            <div>
+                <label for="birthdate">Birthdate</label><br>
+                <input type="date" name="birthdate" id="birthdate">
+            </div>
+            <div>
+                <label for="membership">Membership</label><br>
+                <input type="radio" name="membership" id="membership"> Simple
+                <input type="radio" name="membership" id="membership" checked> Standart
+                <input type="radio" name="membership" id="membership"> Super
+            </div>
+            <div>
+                <label for="hobby">Hobby</label><br>
+                <input type="checkbox" name="hobby" id="hobby">Bike
+                <input type="checkbox" name="hobby" id="hobby" checked>Videogames
+                <input type="checkbox" name="hobby" id="hobby">Clay
+            </div>
+            <input type="submit" value="Submit">
+            <button type="submit">Submit</button>
+            <button type="reset">reset</button>
+        </form>
+        <!-- # + idNAme = div with id -->
+        </br>
+        </br>
+        <a href = "#top"><img 
+            src = "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/up-arrow.png" 
+            alt = "up arrow" 
+            width = "60" 
+            height = "60" 
+            title = "up arrow" 
+            id = "up"/></a>
+        </br>
+        </br>
+    </body>
+</html>

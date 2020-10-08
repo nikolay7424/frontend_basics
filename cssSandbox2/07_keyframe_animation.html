@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyframe animation</title>
+    <style>
+        body {
+            background: #333;
+        }
+
+        .box {
+            background: white;
+            width: 200px;
+            height: 200px;
+            position: relative;
+
+            /* name of animation */
+            animation-name: animate1;
+
+            /* how long */
+            animation-duration: 5s;
+
+            /* hom many times */
+            animation-iteration-count: 1;
+
+            /* this will kepp it in form after animation */
+            animation-fill-mode: forwards;
+
+            /* animation starts after: */
+            animation-delay: 1s;
+
+            /* reverse direction of animation */
+            animation-direction: alternate-reverse;
+
+            /* animation curves basically */
+            animation-timing-function: ease-in-out;
+
+            /* shorter way */
+            animation: animate1 5s forwards 1s ease-in-out;
+            
+        }
+
+        @keyframes animate1 {
+            from {
+                top: 0;
+            }
+
+            to {
+                width: 600px;
+                background-color: red;
+                top: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
