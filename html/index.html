@@ -121,7 +121,7 @@
         </table>
         </br>
         </br>
-            <input name = "options" type = "radio" value = "option 1">option 1<Br>
+            <input name = "options" type = "radio" checked value = "option 1">option 1<Br>
             <input name = "options" type = "radio" value = "option 2">option 2<Br>
         </br>
         </br>
@@ -167,15 +167,15 @@
                 background-color:brown; 
                 color:white;
             ">inline block element1</div>
-                        <div 
-                        align = "center" 
-                        style = "
-                            display: inline-block; 
-                            width:100px; 
-                            height:100px; 
-                            background-color:brown; 
-                            color:white;
-                        ">inline block element2</div>
+            <div 
+            align = "center" 
+            style = "
+                display: inline-block; 
+                width:100px; 
+                height:100px; 
+                background-color:brown; 
+                color:white;
+            ">inline block element2</div>
         </br>
         </br>
 
@@ -206,7 +206,7 @@
             </div>
             <div>
                 <label for="age">Age</label><br>
-                <input type="number" name="age" id="age">
+                <input type="number" min="1" value="1" name="age" id="age">
             </div>
             <div>
                 <label for="birthdate">Birthdate</label><br>
@@ -240,5 +240,90 @@
             id = "up"/></a>
         </br>
         </br>
+        <table border = "2" >
+            <tbody>
+                <tr>
+                    <td colspan="2">ячейка 1</td>
+                    <td>ячейка 3</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">ячейка 4</td>
+                    <td>ячейка 5</td>
+                    <td>ячейка 6</td>
+                </tr>
+                <tr>
+                    <td>ячейка 7</td>
+                    <td>ячейка 8</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br>
+        <table border="1" cellspacing="0" width="400" height="200">
+            <tbody><tr>
+                <th rowspan="2">номер</th>
+                <th colspan="2">теги</th>
+            </tr>
+            <tr>
+                <!-- <th>номер</th> -->
+                <th>тег</th>
+                <th>значение</th>
+            
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td>p</td>
+                <td rowspan="4">для текста</td>
+            </tr>
+            
+            <tr align="center">
+                <td>2</td>
+                <td>a</td>
+                <!--<td>ссылка</td> -->
+                
+            </tr>
+            
+            <tr align="center">
+                <td>3</td>
+                <td>b</td>
+                <!-- <td>жирный текст</td> -->
+                
+            </tr>
+            
+            <tr align="center">
+                <td>4</td>
+                <td>i</td>
+                <!-- <td>курсив</td>-->
+                
+            </tr>
+            
+            <tr align="center">
+                <td>5</td>
+                <td>table</td>
+                <td>таблица</td>
+            </tr>
+            
+            <tr align="center">
+                <td>6</td>
+                <td>tr</td>
+                <td>ряд таблицы</td>
+            </tr>
+            
+            <tr align="center">
+                <td>7</td>
+                <td>td</td>
+                <td rowspan="2">ячейки таблицы</td>
+            </tr>
+            
+            <tr align="center">
+                <td>8</td>
+                <td>th</td>
+                <!-- <td>заголовок таблицы</td>-->
+            </tr>
+        </tbody></table>
+<br><br>
+        <p>"text-align" applies to the content of a box, while "float" applies to the box itself.</p>
+        <br><br>
+
+        
     </body>
 </html>

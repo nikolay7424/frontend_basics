@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.5;
+    background: cadetblue;
+}
+
+
+li {
+    list-style: none;
+}
+
+h2 {
+    background: #ccc;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    background: #ccc;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    padding: 0.2rem;
+    margin: 0.3rem;
+    background: #f4f4f4;
+}
+
+.card-1 a {
+    text-align: left;
+}
+
+a:hover {
+    background: cadetblue;
+    color: #fff;
+}
+
+a:active {
+    background: lightseagreen;
+    color: white;
+}
+
+header div {
+    background: coral;
+    padding: 2rem;
+    color: white;
+    width: 100%;
+}
+
+section {
+    max-width: 1600px;
+    margin: auto;
+    padding: 1rem;
+}
+
+section .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    text-align: center;
+    grid-gap: 1rem;
+}
+
+section .container .card {
+    background: white;
+    padding: 1rem;
+}
+
+section .container .card:nth-child(1) {
+    grid-row: 1 /span 2;
+}
+
+/* toggler */
+.toggler {
+    height: 30px;
+    width: 100%;
+    cursor: pointer;
+    z-index: 2;
+    transform: translate(0, -30px);
+    opacity: 0;
+}
+
+.card-1 ul {
+    transform: translate(0, -30px);
+    display: none;
+}
+
+.toggler:checked + ul{
+    display: block;
+}
+
+.toggler-1:checked ~ .icon-1 {
+    transform: rotateX(90deg);
+}
+
+/* dropdown */
+.card-1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.p-1 {
+    padding: 0.7rem;
+}
+
+@media(max-width: 768px){
+section .container {
+    grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.arrow {
+    font-weight: 900;
+    position: relative;
+    display: inline;
+    float: left;
+    padding-left: 0.5rem;
+}
