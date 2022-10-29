@@ -38,7 +38,6 @@
       --red: #EB5757;
       --green: #34965b;
       --gray: #d0d0d0;
-
     }
 
     .container {
@@ -99,7 +98,25 @@
       text-align: start;
       padding: 0.3rem 0;
       border-bottom: 2px var(--gray) solid;
+    }
 
+    .search-trigger {
+      width: min-content;
+      cursor: pointer;
+      padding: 0.2rem;
+      border-radius: 0.3rem;
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      grid-gap: 0.5rem;
+    }
+
+    .search-trigger:hover {
+      background-color: var(--gray);
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .pl {
+      padding-left: 0.2rem;
     }
 
     td>a {
@@ -123,6 +140,10 @@
     hr {
       border: 1px var(--gray) solid;
     }
+
+    span>img {
+      pointer-events: none;
+    }
   </style>
 
   <title>Title</title>
@@ -134,17 +155,17 @@
     <h1>Books</h1>
     <form id="book-form">
       <div>
-        <label for="title">Title</label>
+        <label class="pl" for="title">Title</label>
         <input placeholder="min 4 characters" type="text" id="title" class="u-full-width">
         <p class="error-message" style="visibility: hidden;">e</p>
       </div>
       <div>
-        <label for="author">Author</label>
+        <label class="pl" for="author">Author</label>
         <input placeholder="min 4 characters" type="text" id="author" class="u-full-width">
         <p class="error-message" style="visibility: hidden;">e</p>
       </div>
       <div>
-        <label for="isbn">ISBN</label>
+        <label class="pl" for="isbn">ISBN</label>
         <input type="number" placeholder="10 or 13 digits" id="isbn" class="u-full-width">
         <p class="error-message" style="visibility: hidden;">e</p>
       </div>
@@ -154,7 +175,7 @@
     </form>
     <form>
       <div>
-        <label for="search">Search</label>
+        <label class="pl" for="search">Search</label>
         <input placeholder="type title, author or isbn" type="text" id="search" class="u-full-width">
         <p class="error-message" style="visibility: hidden;">e</p>
       </div>
@@ -163,9 +184,9 @@
     <table class="u-full-width">
       <thead>
         <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>ISBN</th>
+          <th id="sort-title"><span class="search-trigger">Title <img src="sort.svg"></span></th>
+          <th id="sort-author"><span class="search-trigger">Author <img src="sort.svg"></span></th>
+          <th id="sort-isbn"><span class="search-trigger">ISBN <img src="sort.svg"></span></th>
           <th></th>
         </tr>
       </thead>

@@ -1,0 +1,20 @@
+[
+  {
+    "id" : 1,
+    "name": "John Doe",
+    "compnany": "123designs",
+    "phone": "1234567"
+  },
+  {
+    "id" : 2,
+    "name": "Sarah Conor",
+    "compnany": "7658designs",
+    "phone": "876543"
+  },
+  {
+    "id" : 3,
+    "name": "Jeff Bezos",
+    "compnany": "251designs",
+    "phone": "5789842"
+  }
+]

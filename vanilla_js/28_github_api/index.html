@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- sceleton css -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+  <!-- bootstrap -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> -->
+
+  <!-- material icons -->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+  <!-- materialize css -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+  <!-- jquery -->
+  <!-- <script defer src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> -->
+  <!-- materialize js -->
+  <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/90ed2ffa13.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap bootswatch -->
+  <link rel="stylesheet" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+
+
+  <script defer src="github.js"></script>
+  <script defer src="ui.js"></script>
+  <script defer src="main.js"></script>
+
+
+  <title>github api</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-primary mb-3">
+    <div class="container">
+      <a href="#" class="navbar-brand">Github finder</a>
+    </div>
+  </nav>
+  <div class="container search-container">
+    <div class="search card card-body">
+      <h1>Search gihub users</h1>
+      <p class="lead">enter a username to fetch a user profile and repos</p>
+      <!-- <input type="text" name="" id="search-user" class="form-control" placeholder="gitbub username"> -->
+
+      <div class="input-group has-validation">
+        <span class="input-group-text"><i class="fa-brands fa-github"></i></span>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="search-user" placeholder="github username" required>
+          <label for="search-user">github username</label>
+        </div>
+        <div class="invalid-feedback">
+          user <span id="invalid-user"></span> don't exist
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <div id="profile"></div>
+
+    <footer class="mt-5 p-3 text-center bg-light">
+      Github finder &copy; 2022
+    </footer>
+  </div>
+</body>
+
+</html>

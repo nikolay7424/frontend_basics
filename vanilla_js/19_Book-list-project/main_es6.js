@@ -13,17 +13,19 @@ class UI {
   static titleValidation = false;
   static authorValidation = false;
   static ISBNValidation = false;
+  static sortBool = false;
 
 
   static addBookToList(book) {
     const list = document.getElementById('book-list');
     // create element
     const row = document.createElement('tr');
+    row.className = 'book-row';
     // insert cols
     row.innerHTML = `
-      <td>${book.title}</td>
-      <td>${book.author}</td>
-      <td>${book.isbn}</td>
+      <td class="pl">${book.title}</td>
+      <td class="pl">${book.author}</td>
+      <td class="pl">${book.isbn}</td>
       <td><a href="#" class="delete"><img class="delete-icon" src="delete.svg"></a></td>
     `;
     list.appendChild(row);
@@ -93,38 +95,6 @@ class UI {
     }
   }
 
-  static validate(title, author, isbn) {
-    let elementsArr = [title, author, isbn];
-    let returnValue = false;
-  
-    // empty
-    elementsArr.forEach(function(element){
-      if (element.value === '') {
-        UI.displayErrorMessage(UI.red, 'Please fill the form', element);
-        returnValue = false;
-      } else {
-        if(element.value.length < 4) {
-          UI.displayErrorMessage(UI.red, 'At least 4 characters', element);
-          returnValue = false;
-        } else {
-          UI.displayErrorMessage(UI.green, 'Correct', element);
-          returnValue = true;
-        }
-      }
-    });
-  
-    // isbn 10 or 13 digits
-    if(isbn.value.length != 10 && isbn.value.length != 13) {
-      UI.displayErrorMessage(UI.red, 'Must be 10 or 13 digits', isbn);
-      returnValue = false;
-    } else {
-      UI.displayErrorMessage(UI.green, 'Correct', isbn);
-      returnValue = true;
-    }
-  
-    return returnValue;
-  }
-
   static displayErrorMessage(color, message, element) {
     element.nextElementSibling.style.visibility = 'visible';
     element.nextElementSibling.style.color = color;
@@ -190,6 +160,12 @@ class Store {
       }
     });
     localStorage.setItem('books', JSON.stringify(books));
+  }
+
+  static clearBooks() {
+    document.querySelectorAll('.book-row').forEach(function(row){
+      row.remove();
+    });
   }
 
   static searchBook(isbn) {
@@ -287,6 +263,80 @@ function loadAllEventListeners() {
     Store.removeBook(e.target.parentElement.parentElement.previousElementSibling.textContent);
     e.preventDefault();
   });
+
+  // filter keyup
+  document.getElementById('search').addEventListener('keyup', function(e){
+    const searchString = e.target.value.toLowerCase();
+    const books = document.querySelectorAll('.book-row');
+
+    books.forEach(function(book) {
+      bookNodes = book.childNodes;
+      const title = bookNodes.item(1).textContent;
+      const author = bookNodes.item(3).textContent;
+      const isbn = bookNodes.item(5).textContent;
+      if(title.toLowerCase().indexOf(searchString) != -1 || author.toLowerCase().indexOf(searchString) != -1 || isbn.toLowerCase().indexOf(searchString) != -1) {
+        book.style.display = 'table-row';
+      } else {
+        book.style.display = 'none';
+      }
+    });
+  });
+
+  // sort click
+  document.getElementById('sort-title').firstChild.addEventListener('click', sortRows);
+  document.getElementById('sort-author').firstChild.addEventListener('click', sortRows);
+  document.getElementById('sort-isbn').firstChild.addEventListener('click', sortRows);
+
+  function sortRows(e) {
+    const books = document.querySelectorAll('.book-row');
+    let sortTarget = e.target.firstChild.wholeText.toLowerCase().trim();
+    if(UI.sortBool) {
+      sortTarget = sortTarget = "-" + sortTarget;
+    }
+    let booksArr = [];
+
+    function dynamicSort(property) {
+      var sortOrder = 1;
+      if(property[0] === "-") {
+          sortOrder = -1;
+          property = property.substr(1);
+      }
+      return function (a,b) {
+          /* next line works with strings and numbers, 
+           * and you may want to customize it to your needs
+           */
+          var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+          return result * sortOrder;
+      }
+    }
+
+    books.forEach(function(book, index) {
+      bookNodes = book.childNodes;
+      const title = bookNodes.item(1).textContent;
+      const author = bookNodes.item(3).textContent;
+      const isbn = bookNodes.item(5).textContent;
+      const newBook = {
+        title: `${title}`,
+        author: `${author}`,
+        isbn: `${isbn}`
+      };
+      booksArr[index] = newBook;
+    });
+
+    booksArr.sort(dynamicSort(sortTarget));
+
+    Store.clearBooks();
+
+    booksArr.forEach(function(book) {
+      const newBook = {
+        title: `${book.title}`,
+        author: `${book.author}`,
+        isbn: `${book.isbn}`
+      };
+      UI.addBookToList(newBook);
+    });
+    UI.sortBool = !UI.sortBool;
+  }
 
   // DOM contetn loaded
   document.addEventListener('DOMContentLoaded', Store.displayBooks);
