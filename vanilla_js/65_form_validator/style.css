@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-input-color: rgb(0, 0, 0);
+  --main-input-color-focus: rgba(0, 0, 0, 0.8);
+
+  --error-red: rgb(194, 37, 37);
+  --error-red-focus: rgba(194, 37, 37, 0.5);
+
+  --error-green: rgb(37, 194, 110);
+  --error-green-focus: rgba(37, 194, 110, 0.5);
+}
+
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 10px;
+}
+
+.widget {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--main-input-color);
+  border-radius: 3px;
+}
+
+input:disabled {
+  color: var(--main-input-color-focus);
+  border: 1px solid var(--main-input-color-focus);
+  background-color: lightgray;
+}
+
+input:focus {
+  outline: 1px solid var(--main-input-color-focus);
+}
+
+.red {
+  border: 1px solid var(--error-red);
+}
+
+.red:focus {
+  outline: 1px solid var(--error-red-focus);
+}
+
+.green {
+  border: 1px solid var(--error-green);
+}
+
+.green:focus {
+  outline: 1px solid var(--error-green-focus);
+}
+
+.red-span {
+  color: var(--error-red);
+}
+
+.green-span {
+  color: var(--error-green);
+}
+
+label {
+  color: var(--main-input-color);
+  position: absolute;
+  pointer-events: none;
+  top: 14%;
+  left: 2%;
+  transition: 0.1s ease-in-out;
+}
+
+input:focus + label, .not-empty{
+  top: -35%;
+  left: 0;
+}
+
+.error {
+  height: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 12px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: var(--main-input-color);
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--main-input-color-focus);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.highlight-error {
+  background-color: var(--error-red-focus);
+  transition: 0.2s ease-in-out;
+}
+
+.highlight-back {
+  background-color: white;
+  transition: 0.2s ease-in-out;
+}
