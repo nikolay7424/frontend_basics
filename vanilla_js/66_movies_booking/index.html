@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <!-- sceleton css -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+  <!-- bootstrap -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script> -->
+
+  <!-- material icons -->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+  <!-- materialize css -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+  <!-- jquery -->
+  <!-- <script defer src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> -->
+  <!-- materialize js -->
+  <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/90ed2ffa13.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap bootswatch -->
+  <!-- <link rel="stylesheet" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script> -->
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+
+</head>
+
+<body>
+
+  <div id="dimm" class="dimm"></div>
+
+  <nav class="navbar">
+    <img class="logo" src="img/logo.svg" alt="">
+    <form role="search">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn" type="submit">Search</button>
+    </form>
+  </nav>
+
+  <div class="grid">
+    <div class="grid-item">
+      <img class="movie-img" src="img/1.jpg">
+      <div>
+        <h3>Avatar 2</h3>
+        <div id="one" class="movie-schedule">
+          <p class="movie-schedule_time">13:50</p>
+          <p class="movie-schedule_time">14:20</p>
+          <p class="movie-schedule_time">14:40</p>
+          <p class="movie-schedule_time">14:50</p>
+          <p class="movie-schedule_time">16:20</p>
+          <p class="movie-schedule_time">17:30</p>
+          <p class="movie-schedule_time">18:00</p>
+          <p class="movie-schedule_time">18:20</p>
+          <p class="movie-schedule_time">18:30</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <img class="movie-img" src="img/2.jpg">
+      <div>
+        <h3>Операція Фортуна</h3>
+        <div id="two" class="movie-schedule">
+          <p class="movie-schedule_time">13:50</p>
+          <p class="movie-schedule_time">14:20</p>
+          <p class="movie-schedule_time">14:50</p>
+          <p class="movie-schedule_time">16:20</p>
+          <p class="movie-schedule_time">18:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <img class="movie-img" src="img/3.jpg">
+      <div>
+        <h3>Дивовижний моріс</h3>
+        <div id="three" class="movie-schedule">
+          <p class="movie-schedule_time">13:50</p>
+          <p class="movie-schedule_time">14:20</p>
+          <p class="movie-schedule_time">14:40</p>
+          <p class="movie-schedule_time">14:50</p>
+          <p class="movie-schedule_time">16:20</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <img class="movie-img" src="img/4.jpg">
+      <div>
+        <h3>Меган</h3>
+        <div id="four" class="movie-schedule">
+          <p class="movie-schedule_time">17:30</p>
+          <p class="movie-schedule_time">18:00</p>
+          <p class="movie-schedule_time">18:20</p>
+          <p class="movie-schedule_time">18:30</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <img class="movie-img" src="img/5.jpg">
+      <div>
+        <h3>Щедрик</h3>
+        <div id="five" class="movie-schedule">
+          <p class="movie-schedule_time">13:50</p>
+          <p class="movie-schedule_time">14:20</p>
+          <p class="movie-schedule_time">14:40</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <img class="movie-img" src="img/6.jpg">
+      <div>
+        <h3>8 Жінок</h3>
+        <div id="six" class="movie-schedule">
+          <p class="movie-schedule_time">13:50</p>
+          <p class="movie-schedule_time">14:20</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-wrapper">
+    <div class="modal">
+      <div class="special-symbols">
+        <div class="symbol">
+          <div class="seat"></div>
+          <p>N/A</p>
+        </div>
+        <div class="symbol">
+          <div class="seat seat-selected"></div>
+          <p>Selected</p>
+        </div>
+        <div class="symbol">
+          <div class="seat seat-occupied"></div>
+          <p>Occupied</p>
+        </div>
+      </div>
+      <div class="screen">
+
+      </div>
+      <div class="seats-wrapper">
+        <div class="seats">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+      </div>
+
+      <div class="price-wrapper">
+        <div class="price">
+          <p>you have selected <span id="seats-selected" class="text-highlight">0</span>
+            seats for a price of $<span class="text-highlight" id="price">0</span></p>
+          <button class="btn btn-submit" type="submit">Buy</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+</body>
+
+</html>
